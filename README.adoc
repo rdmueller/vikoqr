@@ -1,0 +1,11 @@
+== vikoqr - Video-Konferenz QR-Code
+
+Ok, in english it would be vicoqr - video-conference QR-code. 
+But since I live in germany, I though the german acronym would be nice.
+
+To learn more about vikoqr, please visit http://rdmueller.github.io/vikoqr .
+
+So, now you should know what it is all about.
+This repository contains the whole code for the single page - that's not very much.
+Feedback is highly welcome!
+
