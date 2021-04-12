@@ -64,10 +64,12 @@ function displayImg(file) {
         console.log("qr code generated")
         var qrcodeImg = document.querySelector("#qrcode img");
         ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
+        window.setTimeout(function() {
+            ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
+        }, 1000)
         qrcodeImg.addEventListener('load', function() {
             console.log("qr code loaded")
             ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
-            qrcode.clear();
         }, false);
 
     }, false);
