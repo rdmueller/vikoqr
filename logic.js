@@ -66,6 +66,7 @@ function displayImg(file) {
         ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
         window.setTimeout(function() {
             ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
+            console.log("timeout");
         }, 1000)
         qrcodeImg.addEventListener('load', function() {
             console.log("qr code loaded")
