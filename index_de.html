@@ -250,10 +250,10 @@ function download() {
     <div id="hero" class="container px-4 text-center bg-light">
       <div class="col-md-12">
         <h1 class="display-4 fw-normal">Notfall QR-Code</h1>
-        <p class="lead fw-normal">Do you also have so many video conferences?<br />
-            Of course you do.Since we are all sitting in our home offices due to the pandemic, we are all in video conferences 😐<br />.
-            Have you ever thought about what would happen if one of the participants suddenly had a stroke or another medical emergency and fell over?<br />
-            The emergency QR code could be a solution!<br />
+        <p class="lead fw-normal">Hast Du auch so viele Videokonferenzen?<br />
+            Natürlich. Denn seit wir durch die Pandemie bedingt alle im Home-Office sitzen, hängen wir alle in Video-Konferenzen 😐<br />
+            Hast Du Dir schon mal Gedanken gemacht, was passieren würde, wenn einer der Teilnehmer plötzlich z.B. einen Schlaganfall bekommt und umfällt?<br />
+            Der Notfall-QR-Code könnte eine Lösung sein!<br />
 
         </p>
       </div>
@@ -262,21 +262,21 @@ function download() {
         <div class="row">
             <div class="col-md-12">
                 <br /><br />
-                <h2>How does it work?</h2>
+                <h2>Wie funktioniert das?</h2>
                 </div>
         </div>
         <div class="row">
             <div class="col-md-4"><br /><br />
-                We almost all use virtual backgrounds in video conferences.
-                The middle part of the background is covered with our body.
+                Wie nutzen fast alle virtuelle Hintergründe in den Videokonferenzen.
+                Mit unserem Körper verdecken wir den mittleren Teil des Hintergrundes.
             </div>
             <div class="col-md-4"><br /><br />
-                In a medical emergency, if someone falls over in front of the screen, the entire background becomes visible.
-                The idea is to store emergency information in this area, for example an address.
+                Im medizinischen Notfall, wenn jemand vor dem Bildschirm umkippt, wird der komplette Hintergrund sichtbar.
+                Die Idee ist nun, in diesem Bereich Notfallinformationen zu hinterlegen, wie z.B. eine Adresse.
             </div>
             <div class="col-md-4"><br /><br />
-                With a QR code, the information is not immediately readable if you stand up for a moment.
-                However, For maximum privacy, you should turn off your camera when you go and fetch a coffe 😀
+                Mit einem QR-Code ist die Information nicht sofort lesbar, solltest Du mal kurz aufstehen.
+                Für maximalen Datenschutz solltest Du Deine Kamera aber ausschalten, wenn Du aus dem Bild gehst.
             </div>
 
         </div>
@@ -285,33 +285,33 @@ function download() {
         <div class="row">
             <div class="col-md-12">
                 <br /><br />
-                <h2>3 Steps...</h2>
+                <h2>3 Schritte zum Ziel</h2>
                 </div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <p>
-        <h3>Step 1</h3>
-                What information should be hidden in the QR code?
-                For example, it could be useful to know the address where you are.
-                For example, go to <a href="https://maps.google.com" target="_new">Google Maps</a> and select the address where you are working.
-                Click on the share symbol and copy the link into the following field:<br /><br />
+        <h3>Schritt 1</h3>
+        Welche Information soll in dem QR-Code versteckt werden?
+        Sinnvoll könnte z.B. die Adresse sein, an der Du bist.
+        Gehe z.B. auf <a href="https://maps.google.com" target="_new">Google Maps</a> und wähle die Adresse, an der Du arbeitest.
+        Klicke auf das Teilen-Symbol und kopiere den Link in folgendes Feld:<br /><br />
         <input type="text" name="qrcontent" id="qrcontent" style="width: 100%;"/>
         </p>
     </div>
         <div class="col-md-4">
         <p>
-            <h3>Step 2</h3>
-            From your computer, select the background image on which you want the QR code to be placed.
-            Pay attention to the aspect ratio of your image. Ideally, it should be 1920x1080 pixels.<br /><br /><br />
+            <h3>Schritt 2</h3>
+            Wähle von Deinem Rechner das Hintergrundbild, auf das Du den QR-Code gesetzt haben möchtest.<br />
+            Achte auf das Seitenverhältnis Deines Bildes. Idealer Weise sollte es 1920x1080 Pixel groß sein.<br /><br /><br />
             <input type="file" id="fileupload" onchange="onUpload();" /></li>
         </p>
     </div>
     <div class="col-md-4">
         <p>
-            <h3>Step 3</h3>
-        Click on the image to save:<br />
-        <canvas id="canvas" width="1920" height="1080" name="test.png" onclick="download();"></canvas>
+            <h3>Schritt 3</h3>
+            Klicke auf das Bild, um es zu speichern:<br />
+            <canvas id="canvas" width="1920" height="1080" name="test.png" onclick="download();"></canvas>
             <div id="qrcode"></div>
             <img id="image" src="" alt="" />
         </p>
@@ -319,10 +319,10 @@ function download() {
     <div class="container px-4">
         <div class="row">
             <div class="col-md-12">
-                <small>Note:<br />
-                    If you use Google Maps, your data will of course end up with Google.<br />
-                    However, your background image remains on your system alone - it is only loaded into the browser.
-            </div>
+                <small>Hinweis:<br />
+                    Wenn Du Google-Maps nutzt, dann landen Deine Daten natürlich bei Google.<br />
+                    Dein Hintergrundbild bleibt allerdings allein auf Deinem System und wird nur in den Browser geladen.</small>
+                </div>
         </div>
     </div>
 </div>
