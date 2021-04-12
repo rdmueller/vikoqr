@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 img#image, div#qrcode {
-    display: none;
+    xdisplay: none;
 }
 canvas#canvas {
     width: 100%;
