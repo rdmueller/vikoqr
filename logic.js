@@ -2,10 +2,11 @@ var qrcodesize=350;
 var qrcodeborder=40;
 var targetx=1920;
 var targety=1080;
+var filename="filename.png";
 
 function onUpload() {
     let fileObj = document.getElementById('fileupload');
-    let file, filename="-";
+    let file;
     if (fileObj.files) {
         file = fileObj.files[0]
         console.log("1");
@@ -15,6 +16,7 @@ function onUpload() {
         fr.readAsDataURL(file);
     } else {
         file = fileObj.value;
+        filename = file.name;
         displayImg(file);
     };
 };
@@ -78,7 +80,7 @@ function displayImg(file) {
 }
 function download() {
     var link = document.createElement('a');
-    link.download = 'filename.png';
+    link.download = "vikoqr-"+filename;
     link.href = document.getElementById('canvas').toDataURL()
     link.click();
 }

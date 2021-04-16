@@ -8,6 +8,8 @@ img#image, div#qrcode {
 canvas#canvas {
     width: 100%;
     cursor: pointer;
+    border: 2px solid #50a3a2;
+    border-radius: 5px;
 }
 main, main div {
     z-index: 10;
@@ -149,4 +151,24 @@ body {
 body {
     padding-top:20px;
     padding-bottom:20px;
+}
+
+#one {
+    background-image: url("icon1.png");
+}
+#two {
+    background-image: url("icon2.png");
+}
+#three {
+    background-image: url("icon3.png");
+}
+.iconback {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    padding-top: 60%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 60%;
+
 }
