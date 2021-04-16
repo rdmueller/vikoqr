@@ -85,6 +85,31 @@
             From your computer, select the background image on which you want the QR code to be placed.
             Pay attention to the aspect ratio of your image. Ideally, it should be 1920x1080 pixels.<br /><br /><br />
             <input type="file" id="fileupload" onchange="onUpload();" />
+            <video autoplay="true" id="videoElement">
+
+            </video>
+            <script>
+                var video = document.querySelector("#videoElement");
+
+                if (navigator.mediaDevices.getUserMedia) {
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                        .then(function (stream) {
+                            video.srcObject = stream;
+                            console.log(stream);
+                            var tracks = stream.getTracks();
+
+                            for (var i = 0; i < tracks.length; i++) {
+                                var track = tracks[i];
+                                console.log(track);
+                            }
+
+                            video.srcObject = null;
+                        })
+                        .catch(function (err0r) {
+                            console.log("Something went wrong!");
+                        });
+                }
+            </script>
         </p>
     </div>
     <div class="col-md-4">

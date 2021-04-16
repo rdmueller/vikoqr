@@ -64,7 +64,7 @@ function displayImg(file) {
             correctLevel : QRCode.CorrectLevel.H
         });
         console.log("qr code generated")
-        var qrcodeImg = document.querySelector("#qrcode img");
+        var qrcodeImg = document.querySelector("#qrcode canvas");
         ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
         window.setTimeout(function() {
             ctx.drawImage(qrcodeImg,(targetx/2-qrcodesize/2),targety-qrcodesize-qrcodeborder);
