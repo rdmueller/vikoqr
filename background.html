@@ -40,11 +40,18 @@
         console.log(i);
         content.innerHTML += "<div id='bubble"+i+"' class='bubble' style='top: 50%; left: "+(i*5)+"%; transform: rotate(45deg)'></div>";
     }
-    rot = 45;
+    var rot = 45;
+    var mtop = 110;
     function animate() {
         for (var i=0; i<10; i++) {
-            document.getElementById("bubble"+i).style["transform"]="rotate("+rot+"deg)";
+            var bubble = document.getElementById("bubble"+i)
+            bubble.style["transform"]="rotate("+rot+"deg)";
             rot = rot+0.1;
+            bubble.style["top"]=mtop+"%";
+            mtop = mtop-0.01;
+            if (mtop<-10) {
+                mtop = 110;
+            }
         }
     }
     window.setInterval(animate,10);
