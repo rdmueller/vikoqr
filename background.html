@@ -36,21 +36,37 @@
 <script>
     var content = document.getElementById('body');
     console.log(content);
+    var data = [];
+    function initBubble() {
+        var b = {
+            top:120,
+            left:Math.random()*120-10,
+            speed:Math.random()*0.2+0.05,
+            rot:(Math.random()*360),
+            rotSpeed:(Math.random()-0.5)*0.5,
+            size:Math.random()*20
+        }
+        console.log(b.left);
+        return b;
+    }
     for (var i=0; i<10; i++) {
         console.log(i);
-        content.innerHTML += "<div id='bubble"+i+"' class='bubble' style='top: 50%; left: "+(i*5)+"%; transform: rotate(45deg)'></div>";
+        var inst = initBubble();
+        inst.top = Math.random()*120-20
+        content.innerHTML += "<div id='bubble"+i+"' class='bubble' style='top: "+inst.top+"%; left: "+inst.left+"%; transform: rotate("+inst.rot+"deg); width: "+inst.size+"vw; height: "+inst.size+"vw;'></div>";
+        data[i]=inst; 
     }
     var rot = 45;
     var mtop = 110;
     function animate() {
         for (var i=0; i<10; i++) {
             var bubble = document.getElementById("bubble"+i)
-            bubble.style["transform"]="rotate("+rot+"deg)";
-            rot = rot+0.1;
-            bubble.style["top"]=mtop+"%";
-            mtop = mtop-0.01;
-            if (mtop<-10) {
-                mtop = 110;
+            bubble.style["transform"]="rotate("+data[i].rot+"deg)";
+            data[i].rot = data[i].rot+data[i].rotSpeed;
+            bubble.style["top"]=data[i].top+"%";
+            data[i].top = data[i].top-data[i].speed;
+            if (data[i].top<-50) {
+                data[i]=initBubble();
             }
         }
     }
